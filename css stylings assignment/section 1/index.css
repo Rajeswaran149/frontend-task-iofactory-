@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+}
+
+.bodyEnclosure{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cardsEnclosure{
+    display: grid;
+    width: 60%;
+    /* height: 60%; */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    justify-content: center;
+}
+
+.mainCardWrapper{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    width: 100%;
+    height: 100%;
+}
+
+.mainCardWrapper img{
+    width: 100%;
+    height: 50%;
+    object-fit:cover;
+}
+
+.mainSectionContent{
+    display: grid;
+    grid-template-rows: max-content max-content max-content max-content;
+    height: calc(50% - 84px);
+    align-items: space-around;
+    background-color: blueviolet;
+    padding: 40px;
+    color: white;
+    gap: 20px;
+}
+
+.mainSectionId{
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.mainSectionHeading{
+    font-size: 24px;
+}
+
+.mainSectionDescription{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.mainSectionButton{
+    font-size: 8px;
+    font-weight: 400;
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 30px;
+    width: 90px;
+    background: transparent;
+    color: #fff;
+}
+
+.mainSectionButton span {
+    margin-left: 8px;
+}
+
+.subCardWrapper {
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 10%), 0 -1px 1px rgb(0 0 0 / 10%);
+}
+
+.subSectionImage {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.imageWrapper {
+    position: relative;
+}
+
+.personImage {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: -10px;
+    left: 22px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    object-fit: contain;
+    background: aliceblue;
+}
+
+.subSectionHeading {
+    font-size: 16px;
+}
+
+.subsectionContent {
+    padding: 12px;
+}
+
+.subSectionDescription {
+    font-size: 14px;
+    color:gray;
+    padding: 12px 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    height: 23px;
+}
+
+.subSectionFooter {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid lightgray;
+    padding: 16px 0 0;
+    margin-top: 12px;
+}
+
+.subSectionFooter > div {
+    display: flex;
+    gap: 8px;
+    font-size: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    .bodyEnclosure {
+        padding: 12px;
+    }
+    
+    .cardsEnclosure{
+        width: 100%;
+        height: unset;
+        grid-template-columns: unset;
+        grid-template-rows: unset;
+    }
+
+    .mainCardWrapper{
+        grid-column-start: unset;
+        grid-column-end: unset;
+        grid-row-start: unset;
+        grid-row-end: unset;
+    }
+
+    .mainCardWrapper img{
+        height: unset;
+    }
+
+    .mainSectionContent{
+        height: unset;
+    }
+
+    .subSectionImage {
+        height: 200px;
+    }
+}
